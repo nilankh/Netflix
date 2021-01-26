@@ -243,4 +243,16 @@ section {
         display: block;
         padding: 20px 50px;
     }
+    .menu-close,
+    .menu-open{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+#chk1:checked ~ ul{
+    left: 0;
+}
+#chk1{
+    display: none;
 }
