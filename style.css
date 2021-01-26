@@ -207,5 +207,10 @@ section {
     background: #0009;
     color: white;
     padding: 5px 10px;
-    
+    transform: translateY(-50%);
+    cursor: pointer;
 }
+.next{
+    right: 0;
+}
+/* Responsive */
