@@ -239,10 +239,10 @@
       showSlide();
       function showSlide(n) {
         if (slideIndex > slides.length - 1) {
-          slideIndex = slides.length - 1;
+          slideIndex = 0;
         }
-        if(slideIndex < 0){
-            slideIndex = 0;
+        if (slideIndex < 0) {
+          slideIndex = slides.length - 1;
         }
         for (let i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
@@ -264,10 +264,16 @@
       next.addEventListener("click", () => {
         nav.scrollLeft += dots[0].offsetWidth;
         showSlide((slideIndex += 1));
+        if (slideIndex == 0) {
+          nav.scrollLeft = 0;
+        }
       });
       prev.addEventListener("click", () => {
         nav.scrollLeft -= dots[0].offsetWidth;
         showSlide((slideIndex -= 1));
+        if (slideIndex === slides.length - 1) {
+          nav.scrollLeft = nav.scrollWidth;
+        }
       });
     </script>
   </body>
