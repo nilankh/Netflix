@@ -256,3 +256,32 @@ section {
 #chk1{
     display: none;
 }
+@media (max-width: 760px){
+    .row .nav{
+        height: auto;
+    }
+    .nav .nav-bar{
+        height: auto;
+        flex-wrap: wrap;
+        transition: 0.5s linear;
+    }
+    .column{
+        width: 25%;
+    }
+    .prev, .next{
+        display: none;
+    }
+}
+@media (max-width: 550px){
+    .search{
+        position: fixed;
+        top:20px;
+        z-index: 99;
+        left: -100%;
+        transform: translateX(-50%);
+        transition: 0.5s linear;
+    }
+}
+#chk1:checked ~ .search{
+    left: 50%;
+}
