@@ -9,3 +9,24 @@ body {
   min-height: 100vh;
   background: #111;
 }
+/* ----------------Header--------- */
+header{
+    width: 100%;
+    min-height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #111;
+    position: relative;
+}
+
+.logo{
+    font-size: 2em;
+    color: red;
+    margin-left: 100px;
+}
+
+.logo h2{
+    letter-spacing: 2px;
+}
